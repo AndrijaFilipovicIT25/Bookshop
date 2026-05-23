@@ -1,0 +1,64 @@
+[
+  {
+    "title": "The Frugal Wizards Handbook for Surviving Medieval England",
+    "author": "J.R.R. Tolkien",
+    "description": "Fantasy adventure",
+    "bookLook": {
+      "width": 15.24,
+        "height": 22.86,
+        "depth": 2.54,
+
+      "frontTexture": "/4front.jpeg",
+      "backTexture": "/4back.jpeg",
+      "spineTexture": "/4spine.jpeg",
+
+      "sideColor": "#d4c29a"
+    }
+  },
+  {
+    "title": "The way of the househusband 1",
+    "author": "J.R.R. Tolkien",
+    "description": "Fantasy adventure",
+    "bookLook": {
+      "width": 14.61,
+      "height": 19.96,
+      "depth": 1.27,
+
+      "frontTexture": "/1front.jpg",
+      "backTexture": "/1back.jpg",
+      "spineTexture": "/1spine.jpg",
+
+      "sideColor": "#d4c29a"
+    }
+  },  {
+    "title": "The way of the househusband 2",
+    "author": "J.R.R. Tolkien",
+    "description": "Fantasy adventure",
+    "bookLook": {
+      "width": 14.61,
+      "height": 20.96,
+      "depth": 1.27,
+
+      "frontTexture": "/2front.jpg",
+      "backTexture": "/2back.jpg",
+      "spineTexture": "/2spine.jpg",
+
+      "sideColor": "#d4c29a"
+    }
+  },  {
+    "title": "The way of the househusband 3",
+    "author": "J.R.R. Tolkien",
+    "description": "Fantasy adventure",
+    "bookLook": {
+      "width": 14.61,
+      "height": 20.96,
+      "depth": 1.27,
+
+      "frontTexture": "/3front.jpg",
+      "backTexture": "/3back.jpg",
+      "spineTexture": "/3spine.jpg",
+
+      "sideColor": "#d4c29a"
+    }
+  }
+]
