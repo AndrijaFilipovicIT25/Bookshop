@@ -1,5 +1,7 @@
-import book from "./Book"
-export default function BookSpineRow({ books }) {
+export default function BookSpineRow({
+  books,
+  onBookClick,
+}) {
 
   return (
 
@@ -7,7 +9,7 @@ export default function BookSpineRow({ books }) {
       style={{
         display: "flex",
         alignItems: "flex-end",
-        marigin:"50px",
+
         gap: "8px",
 
         width: "100%",
@@ -18,7 +20,8 @@ export default function BookSpineRow({ books }) {
 
         const look = book.bookLook;
 
-        const height = 600 * look.height/25;
+        const height =
+          600 * look.height / 25;
 
         const width =
           height * look.depth;
@@ -32,10 +35,12 @@ export default function BookSpineRow({ books }) {
 
             alt={book.title}
 
+            onClick={() => onBookClick(book)}
+
             style={{
               height: `${height}px`,
               width: `${width}px`,
-              
+
               objectFit: "cover",
 
               borderRadius: "4px",
@@ -46,6 +51,21 @@ export default function BookSpineRow({ books }) {
               userSelect: "none",
 
               display: "block",
+
+              cursor: "pointer",
+
+              transition:
+                "transform 0.2s ease",
+            }}
+
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform =
+                "translateY(-10px)";
+            }}
+
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform =
+                "translateY(0px)";
             }}
           />
 

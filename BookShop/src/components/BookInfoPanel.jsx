@@ -1,5 +1,8 @@
 import book from "./Book"
-export default function BookInfoPanel({ book }) {
+export default function BookInfoPanel({
+  book,
+  onClose,
+}) {
 
   return (
 
@@ -162,28 +165,29 @@ export default function BookInfoPanel({ book }) {
           Add to Library
         </button>
 
-        <button
-          style={{
-            padding: "18px 34px",
+<button
+  onClick={onClose}
+  style={{
+    padding: "18px 34px",
 
-            borderRadius: "16px",
+    borderRadius: "16px",
 
-            border:
-              "1px solid rgba(255,255,255,0.2)",
+    border:
+      "1px solid rgba(255,255,255,0.2)",
 
-            background: "rgba(255,255,255,0.05)",
+    background: "rgba(255,255,255,0.05)",
 
-            color: "white",
+    color: "white",
 
-            fontSize: "16px",
+    fontSize: "16px",
 
-            cursor: "pointer",
+    cursor: "pointer",
 
-            transition: "0.2s",
-          }}
-        >
-          Close
-        </button>
+    transition: "0.2s",
+  }}
+>
+  Close
+</button>
 
       </div>
 
