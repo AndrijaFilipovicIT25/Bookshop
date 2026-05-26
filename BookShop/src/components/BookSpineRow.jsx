@@ -1,6 +1,8 @@
 export default function BookSpineRow({
   books,
   onBookClick,
+  hiddenBookKey,
+  getBookKey,
 }) {
 
   return (
@@ -16,9 +18,12 @@ export default function BookSpineRow({
       }}
     >
 
-      {books.map((book, index) => {
+      {books.map((book) => {
 
         const look = book.bookLook;
+        const bookKey = getBookKey(book);
+        const isHidden =
+          hiddenBookKey === bookKey;
 
         const height =
           600 * look.height / 25;
@@ -29,44 +34,37 @@ export default function BookSpineRow({
         return (
 
           <img
-            key={index}
+            key={bookKey}
 
             src={look.spineTexture}
 
             alt={book.title}
 
-            onClick={() => onBookClick(book)}
+            onClick={(event) => onBookClick(book, event)}
 
             style={{
               height: `${height}px`,
               width: `${width}px`,
 
-              objectFit: "cover",
+              objectFit: "fill",
 
-              borderRadius: "4px",
+              
 
-              boxShadow:
-                "0 4px 12px rgba(0,0,0,0.25)",
+              
 
               userSelect: "none",
 
               display: "block",
 
+              opacity: isHidden ? 0 : 1,
+              pointerEvents: isHidden ? "none" : "auto",
+
               cursor: "pointer",
 
-              transition:
-                "transform 0.2s ease",
+
             }}
 
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform =
-                "translateY(-10px)";
-            }}
 
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform =
-                "translateY(0px)";
-            }}
           />
 
         );

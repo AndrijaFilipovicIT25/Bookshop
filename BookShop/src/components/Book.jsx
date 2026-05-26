@@ -19,42 +19,45 @@ export default function Book({ book }) {
   spineTexture.colorSpace = THREE.SRGBColorSpace;
   backTexture.colorSpace = THREE.SRGBColorSpace;
 
+  const sideMaterial =
+    new THREE.MeshBasicMaterial({
+      color: look.sideColor,
+      toneMapped: false,
+    });
+
   const materials = [
 
     // right
-    new THREE.MeshStandardMaterial({
-      color: look.sideColor,
-    }),
+    sideMaterial,
 
     // left (spine)
     new THREE.MeshBasicMaterial({
       map: spineTexture,
+      toneMapped: false,
     }),
 
     // top
-    new THREE.MeshStandardMaterial({
-      color: look.sideColor,
-    }),
+    sideMaterial,
 
     // bottom
-    new THREE.MeshStandardMaterial({
-      color: look.sideColor,
-    }),
+    sideMaterial,
 
     // front
     new THREE.MeshBasicMaterial({
       map: frontTexture,
+      toneMapped: false,
     }),
 
     // back
     new THREE.MeshBasicMaterial({
       map: backTexture,
+      toneMapped: false,
     }),
   ];
 
   return (
     <mesh
-      rotation={[0, 1.57, 0]}
+      rotation={[0, Math.PI / 2, 0]}
       material={materials}
     >
       <boxGeometry

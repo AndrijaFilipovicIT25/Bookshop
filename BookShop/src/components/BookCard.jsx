@@ -22,8 +22,7 @@ export default function BookCard({
         display:"inline-block",
         verticalAlign: "top",
         position:"relative",
-        border:"solid black 2px",
-        background: "rgba(255, 255, 255, 0.2)",
+        
         padding: "0px",
         margin:"0px",
         boxSizing: "border-box",
@@ -40,13 +39,6 @@ export default function BookCard({
           position: [0, 0, 10],
         }}
       >
-
-        <ambientLight intensity={0.6} />
-
-  <directionalLight
-    position={[5, 5, 5]}
-    intensity={2}
-  />
 
         <Book book={book} />
 

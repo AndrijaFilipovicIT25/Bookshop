@@ -21,7 +21,7 @@
     "description": "Fantasy adventure",
     "bookLook": {
       "width": 14.61,
-      "height": 19.96,
+      "height": 20.96,
       "depth": 1.27,
 
       "frontTexture": "/1front.jpg",
